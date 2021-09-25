@@ -16,7 +16,8 @@ In doing some initial perusing through the data, I found some curiosities and ha
 - While I only see 7 unique reasons for bonusPointsEarnedReason, however this can be separated out into its own table as well. Having a separate table will allow reasons to be added easily for promotions (Holidays, seasonal sales, etc.), instead of having to update the full table of existing reciepts and adding more data, replace with "reason 6".
 
 <u>Data Quality Issues</u>
-- Please see photos attached and notes below. The white lines indicate null values from each table.  
+- Please see photos attached and notes below (users null values, receipts null values, and brands null values).
+- The white lines indicate null values from each table.  
 &nbsp;  
 
 Users
