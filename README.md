@@ -15,3 +15,9 @@ I tried to keep my library usage fairly small:
     import json
     
 I did my insight using python's pandas dataframes, along with SQL queries.
+
+Recommendation on running files:
+- Files arrived as json.gz. Extracting data had some issues, so the below commands were used in the command line:
+    >>> gzip -dk receipts.json.gz
+    >>> gzip -dk brands.json.gz
+    >>> gzip -dk users.json.gz
