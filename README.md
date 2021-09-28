@@ -18,13 +18,15 @@ Files arrived as json.gz. Extracting data had some issues, so the below commands
     gzip -dk brands.json.gz  
     gzip -dk users.json.gz  
 
-Files were turned from unstructured json files into structured pandas dataframes, using the below files:
+Files were turned from unstructured json files into structured pandas dataframes.
+In /python-clean/:
 
     users-clean.py
     brands-clean.py
     receipts-clean.py   // this produces 2 files, one for the receipt, and one where each row is an item on the receipt.
     
-After creating a database with `CREATE DATABASE Fetch;`, tables were inserted into SQL:
+After creating a database with `CREATE DATABASE Fetch;`, tables were inserted into SQL.
+In /SQL-load/:
 
     SQL-load-users.sql
     SQL-load-brands.sql
