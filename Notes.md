@@ -4,6 +4,8 @@
 
 In doing some initial perusing through the data, I found some curiosities and had questions:
 
+- Is there an API I should be aware of for easier connectivity?
+
 <u>Reciepts Table</u>
 - What are the +/- 430 test brands listed in the most recent recipets? Is this something I should be aware of for the future and/or be keeping an eye on how these brands perform?
 - Barcode: Item 4011 - Item not found. What is this product?
