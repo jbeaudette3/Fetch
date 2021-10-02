@@ -1,7 +1,6 @@
 DROP TABLE `Fetch`.`receipt_item`;
 CREATE TABLE `Fetch`.`receipt_item`(
-	i INT NOT NULL
-	, recpt_no TEXT (50) NOT NULL
+	recpt_item TEXT (50) NOT NULL
 	, `_id.$oid` TEXT (50) NOT NULL
 	, item_no INT(5) NOT NULL
 	, barcode INT
@@ -38,7 +37,6 @@ CREATE TABLE `Fetch`.`receipt_item`(
 	, deleted TEXT
 	, priceAfterCoupon FLOAT
 	, metabriteCampaignId TEXT
-	, PRIMARY KEY(i)
 );
 
 LOAD DATA LOCAL INFILE '/data/cleaned_receipt_items.tsv'
