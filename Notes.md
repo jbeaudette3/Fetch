@@ -2,7 +2,7 @@
 ---
 &nbsp;
 
-In doing some initial perusing through the data, I found some curiosities, questions, and recommendations for improvment:
+In doing some initial perusing through the data, I found some curiosities, questions, and recommendations for improvement:
 
 - Is there an API I should be aware of for easier connectivity?
 
