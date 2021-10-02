@@ -35,6 +35,8 @@ In doing some initial perusing through the data, I found some curiosities, quest
 
 ---
 
-That's all the notes I have at this time. If you have any questions or concerns, please feel free to let me know!
-Best,
+That's all the notes I have at this time.  
+If you have any questions or concerns, please feel free to let me know!  
+
+Best,  
 Jeff Beaudette
