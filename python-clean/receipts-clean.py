@@ -1,4 +1,4 @@
-file_path = '/content/drive/MyDrive/Fetch Interview/receipts.json'
+file_path = '/data/receipts.json'
 
 recpts = [json.loads(line) for line in open(file_path, 'r')]
 recpts = json.dumps(recpts)
@@ -14,9 +14,8 @@ recpts['modifyDate.$date2'] = pd.to_datetime(recpts['modifyDate.$date'], unit = 
 recpts['pointsAwardedDate.$date2'] = pd.to_datetime(recpts['pointsAwardedDate.$date'], unit = 'ms')
 recpts['purchaseDate.$date2'] = pd.to_datetime(recpts['purchaseDate.$date'], unit = 'ms')
 
-# this works
 
-# manually flatten the list, cuz id how better to do this
+# manually flatten the list, cuz idk how better to do this
 # turn rewardsReceiptItemList into its own table
 # make list of all unique keys in column
 
@@ -46,12 +45,13 @@ for i in range(len(rlist)):
 # create new dataframe
 # use newly created list as column headers
 # 2021.09.25 - currently 35 columns
+
 # blank it out first, just in case (debugging probs)
-df_recpt = pd.DataFrame()
+# df_recpt = pd.DataFrame()
 df_recpt = pd.DataFrame(columns = recptItems)
 
 # takes like 30 seconds to run
-# goes through each reciept item
+# goes through each receipt item
 # fills values into a dataframe
 for i in range(len(rlist)):
   r = rlist.iloc[i]
@@ -68,6 +68,7 @@ for i in range(len(rlist)):
       recpt_item = f'{recpts.iloc[i]["_id.$oid"]}-{j}'
 
       for key, value in r[j].items():
+        # syntax below
         # pd.at[row, column] = value
 
         # row/index/primary key = recpt_item
@@ -97,5 +98,5 @@ df_recpt.insert(2, 'item_no', item_no)
 recpts = recpts.drop('rewardsReceiptItemList', axis = 1)
 
 # save each as tab-separated values
-recpts.to_csv('/data/cleaned_receipts.tsv', sep='\t')
-df_recpt.to_csv('/data/cleaned_receipt_items.tsv', sep='\t')
+recpts.to_csv('/data/cleaned_receipts.tsv', sep='\t', index = False)
+df_recpt.to_csv('/data/cleaned_receipt_items.tsv', sep='\t', index = False)
