@@ -22,7 +22,7 @@ CREATE TABLE `Fetch`.`receipts`(
 	, `purchaseDate.$date2` TEXT
 );
 
-LOAD DATA LOCAL INFILE '/Users/Jeff-Beaudette/Desktop/interview/cleaned_receipts.tsv'
+LOAD DATA LOCAL INFILE '/data/cleaned_receipts.tsv'
 INTO TABLE receipts
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
