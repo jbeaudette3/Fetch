@@ -13,7 +13,7 @@ CREATE TABLE `Fetch`.`users` (
 	, `lastLoginDate2.$date` TEXT
 );
 
-LOAD DATA LOCAL INFILE '/Users/Jeff-Beaudette/Desktop/interview/cleaned_users.tsv'
+LOAD DATA LOCAL INFILE '/data/cleaned_users.tsv'
 INTO TABLE users
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
