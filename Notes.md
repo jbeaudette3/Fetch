@@ -22,7 +22,6 @@ In doing some initial perusing through the data, I found some curiosities, quest
 - Why are so many items left with no categories?
 
 ---
-&nbsp;
 
 <u>Performance and Scaling</u>
 - reciepts item list should probably be it's own table, and have a unique ID to link back to rewards table.
