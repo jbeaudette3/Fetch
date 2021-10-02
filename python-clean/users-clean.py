@@ -1,5 +1,5 @@
 # load data
-df = pd.DataFrame(pd.read_json('/content/drive/MyDrive/Fetch Interview/users.json',\
+df = pd.DataFrame(pd.read_json('/data/users.json',\
                                lines = True))
 
 # normalize
@@ -16,6 +16,6 @@ flat_users['lastLogin2.$date'] = pd.to_datetime(flat_users['lastLogin.$date'], u
 flat_users = flat_users.drop('lastLogin', axis = 1)
 
 # save as tab-separated values
-flat_users.to_csv('/content/drive/MyDrive/Fetch Interview/cleaned_users.tsv',\
+flat_users.to_csv('/data/cleaned_users.tsv',\
                   sep='\t',\
                   index = False)
