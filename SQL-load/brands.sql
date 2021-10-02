@@ -11,7 +11,7 @@ CREATE TABLE `Fetch`.`brands`(
 	, `cpg.$ref` VARCHAR(10)
 );
 
-LOAD DATA LOCAL INFILE '/Users/Jeff-Beaudette/Desktop/interview/cleaned_brands.csv'
+LOAD DATA LOCAL INFILE '/data/cleaned_brands.csv'
 INTO TABLE brands
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
