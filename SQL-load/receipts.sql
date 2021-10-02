@@ -1,7 +1,6 @@
 DROP TABLE `Fetch`.`receipts`;
 CREATE TABLE `Fetch`.`receipts`(
-	i INT NOT NULL
-	, bonusPointsEarned INT
+	bonusPointsEarned INT
 	, bonusPointsEarnedReason TEXT
 	, pointsEarned INT
 	, purchasedItemCount INT
@@ -15,16 +14,15 @@ CREATE TABLE `Fetch`.`receipts`(
 	, `modifyDate.$date` FLOAT
 	, `pointsAwardedDate.$date` FLOAT
 	, `purchaseDate.$date` FLOAT
-        , `createDate.$date2` FLOAT
-        , `dateScanned.$date2` FLOAT
-	, `finishDate.$date2` FLOAT
-	, `modifyDate.$date2` FLOAT
-	, `pointsAwardedDate.$date2` FLOAT
-	, `purchaseDate.$date2` FLOAT
-	, PRIMARY KEY(i)
+	, `createDate.$date2` TEXT
+	, `dateScanned.$date2` TEXT
+	, `finishDate.$date2` TEXT
+	, `modifyDate.$date2` TEXT
+	, `pointsAwardedDate.$date2` TEXT
+	, `purchaseDate.$date2` TEXT
 );
 
-LOAD DATA LOCAL INFILE '/data/cleaned_receipts.tsv'
+LOAD DATA LOCAL INFILE '/Users/Jeff-Beaudette/Desktop/interview/cleaned_receipts.tsv'
 INTO TABLE receipts
 FIELDS TERMINATED BY '\t'
 LINES TERMINATED BY '\n'
