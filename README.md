@@ -26,7 +26,7 @@ In /python-clean/:
     brands-clean.py
     receipts-clean.py   // this produces 2 files, one for the receipt, and one where each row is an item on the receipt.
     
-After creating a database with `CREATE DATABASE Fetch;`, tables were inserted into SQL.
+After creating a database with `CREATE DATABASE Fetch;`, tables were inserted into SQL using mySQL.
 In /SQL-load/:
 
     SQL-load-users.sql
