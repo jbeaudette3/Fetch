@@ -16,7 +16,7 @@ SET @1MonthPrevious = (SELECT @mostRecentDate - INTERVAL 1 MONTH);
 WITH idTable AS
 (
 SELECT `_id.$oid` FROM receipts
-WHERE FROM_UNIXTIME(`dateScanned.$date`/1000, '%c') >= EXTRACT(MONTH FROM @mostRecentDate)
+WHERE FROM_UNIXTIME(`dateScanned.$date`/1000, '%c') = EXTRACT(MONTH FROM @mostRecentDate)
 )
 
 -- get unique rewards group and count them if their id matches timeframe
