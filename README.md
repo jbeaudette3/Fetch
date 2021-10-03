@@ -37,3 +37,7 @@ In /SQL-load/:
  Initial query: Average Spend vs Total Items Purchased where rewards points were accepted vs rejected:
  
      SQL-Query-AvgSpend_vs_TotalItemsPurchased.sql
+
+Second query: Top brands for receipts scanned for most recent month, and 1 month previous. Query uses 2 variables for time with CTE to extract most recent OIDs:
+
+    SQL-Query-top_brands_for_recpts_scanned.sql
